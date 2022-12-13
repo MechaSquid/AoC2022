@@ -1,0 +1,21 @@
+total = 0
+counter=0
+list1 = []
+list2 = []
+with open ('input.txt', 'r') as f:
+    lines = f.readlines()
+    for line in lines:
+        lon=line.rstrip()
+        split1 = lon.split(',')
+        split2 = split1[0].split('-')
+        split3 = split1[1].split('-')
+        y=int(split2[1])+ 1
+        z=int(split2[0])
+        t=int(split3[1])+1
+        u=int(split3[0])
+        for merp in range (z, y):
+            list1.append(merp)
+        for merp in range (u,t):
+            list2.append(merp)
+        print (list1)
+        print (list2)

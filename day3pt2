@@ -26,10 +26,11 @@ with open ('input.txt', 'r') as f:
             y = set(list2)
             z = set(list3)
             result = x.intersection(y, z)
-            print (result)
-            i = result.string()
-            print(i)
-            total = total + prio[i]
+            #print (result)
+            i = str(result)
+            for meep in result:
+                total = total + prio[meep]
+            #total = total + prio[i]
 
             counter = 0
             list1 = []

@@ -1,0 +1,24 @@
+list1 = ['w','b','d','n','c','f','j']
+list2 = ['p','z','v','q','l','s','t']
+list3 = ['p','z','b','g','j','t']
+list4 = ['d','t','l','j','z','b','h','c']
+list5 = ['g','v','b','j','s']
+list6 = ['p','s','q']
+list7 = ['b','v','d','f','l','m','p','n']
+list8 = ['p','s','m','f','b','d','l','r']
+list9 = ['v','d','t','r']
+
+#move 4 from 9 to 6
+
+with open ('input.txt', 'r') as f:
+    lines = f.readlines()
+    for line in lines:
+        lon=line.rstrip()
+        string1 = lon.replace(' from ', ',')
+        string2 = string1.replace(' to ',',')
+        finalstring = string2.replace('move ','')
+        loost = finalstring.split(",")
+        amountMoved = [eval(i) for i in loost]
+        for x in range (amountMoved[0]):
+            print("woot")
+            

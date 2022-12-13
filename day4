@@ -1,4 +1,3 @@
-total = 0
 counter=0
 list1 = []
 list2 = []
@@ -17,5 +16,12 @@ with open ('input.txt', 'r') as f:
             list1.append(merp)
         for merp in range (u,t):
             list2.append(merp)
-        print (list1)
-        print (list2)
+        items1 = set(list1)
+        if set(list2).issubset(set(list1)):
+            counter = counter + 1
+        elif set(list1).issubset(set(list2)):
+            counter = counter + 1 
+        list1 = []
+        list2 = []
+print(counter)
+        
